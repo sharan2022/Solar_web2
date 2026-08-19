@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/aaryon-logo.png.asset.json";
+import logo from "@/assets/Aaryon Logo.png";
 
 const links = [
   { label: "Solutions", href: "#solutions" },
@@ -10,17 +10,17 @@ const links = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
-      <nav className="mx-auto flex h-24 max-w-6xl items-center justify-between px-5">
+      <nav className="mx-auto flex min-h-24 max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3">
         <a href="#top" className="flex items-center">
           <img
-            src={logoAsset.url}
-            alt="Aaryon Energy Solutions — clean energy, smarter tomorrow"
+            src={logo}
+            alt="Aaryon Energy Solutions"
             width={220}
             height={148}
-            className="h-20 w-auto"
+            className="h-20 w-auto object-contain"
           />
         </a>
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="order-3 flex w-full items-center justify-center gap-5 overflow-x-auto md:order-none md:w-auto md:gap-8">
           {links.map((l) => (
             <a
               key={l.href}

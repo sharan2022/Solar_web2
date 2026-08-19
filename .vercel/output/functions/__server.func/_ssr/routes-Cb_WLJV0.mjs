@@ -1,17 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CTp1fl_n.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Cb_WLJV0.js
 var import_jsx_runtime = require_jsx_runtime();
-var aaryon_logo_png_asset_default = {
-	version: 1,
-	asset_id: "76107265-f629-49f9-9452-fae29f90d80a",
-	project_id: "85b7a368-d6c9-423d-b288-083b59f2e04f",
-	url: "/__l5e/assets-v1/76107265-f629-49f9-9452-fae29f90d80a/aaryon-logo.png",
-	r2_key: "a/v1/85b7a368-d6c9-423d-b288-083b59f2e04f/76107265-f629-49f9-9452-fae29f90d80a/aaryon-logo.png",
-	original_filename: "aaryon-logo.png",
-	size: 1274553,
-	content_type: "image/png",
-	created_at: "2026-08-19T04:07:49Z"
-};
+var Aaryon_Logo_default = "/assets/Aaryon%20Logo-CXUlSVTL.png";
 var links = [
 	{
 		label: "Solutions",
@@ -34,21 +24,21 @@ function Nav() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
 		className: "sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-			className: "mx-auto flex h-24 max-w-6xl items-center justify-between px-5",
+			className: "mx-auto flex min-h-24 max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 					href: "#top",
 					className: "flex items-center",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: aaryon_logo_png_asset_default.url,
-						alt: "Aaryon Energy Solutions — clean energy, smarter tomorrow",
+						src: Aaryon_Logo_default,
+						alt: "Aaryon Energy Solutions",
 						width: 220,
 						height: 148,
-						className: "h-20 w-auto"
+						className: "h-20 w-auto object-contain"
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "hidden items-center gap-8 md:flex",
+					className: "order-3 flex w-full items-center justify-center gap-5 overflow-x-auto md:order-none md:w-auto md:gap-8",
 					children: links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: l.href,
 						className: "text-sm text-muted-foreground transition-colors hover:text-accent",
