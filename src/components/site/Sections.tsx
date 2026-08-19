@@ -18,7 +18,7 @@ export function Hero() {
           </p>
           <a
             href="#contact"
-            className="bg-gradient-solar mt-9 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lift"
+            className="bg-gradient-solar mt-9 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-deep shadow-lift"
           >
             Get a free site assessment
           </a>
@@ -223,7 +223,7 @@ export function Contact() {
           </address>
           <a
             href="tel:+919150864777"
-            className="bg-gradient-solar mt-7 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-primary-foreground"
+            className="bg-gradient-solar mt-7 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-deep"
           >
             Call for a free assessment
           </a>
