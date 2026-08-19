@@ -7,18 +7,18 @@ export function Hero() {
     <section id="top" className="bg-gradient-deep text-deep-foreground">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
-          <p className="eyebrow text-aqua">Rooftop Solar · EV Charging</p>
+          <p className="eyebrow text-solar">Rooftop Solar · EV Charging</p>
           <h1 className="mt-5 text-4xl leading-[1.05] font-bold md:text-6xl">
             Turn your rooftop into a power plant.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-deep-foreground/75">
-            Aaryon Energy designs, installs and maintains solar systems for
+            Clean energy, smarter tomorrow. Aaryon Energy designs, installs and maintains solar systems for
             homes, businesses and factories across Tamil Nadu — plus turnkey EV
             charging stations built to last 25 years.
           </p>
           <a
             href="#contact"
-            className="bg-gradient-aqua mt-9 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lift"
+            className="bg-gradient-solar mt-9 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-deep shadow-lift"
           >
             Get a free site assessment
           </a>
@@ -29,7 +29,7 @@ export function Hero() {
               ["Turnkey", "Design to grid sync"],
             ].map(([k, v]) => (
               <div key={v}>
-                <dt className="font-display text-xl font-bold text-aqua">{k}</dt>
+                <dt className="font-display text-xl font-bold text-solar">{k}</dt>
                 <dd className="mt-1 text-xs text-deep-foreground/65">{v}</dd>
               </div>
             ))}
@@ -198,7 +198,7 @@ export function Contact() {
     <section id="contact" className="bg-gradient-deep text-deep-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="eyebrow text-aqua">Talk to us</p>
+          <p className="eyebrow text-solar">Talk to us</p>
           <h2 className="mt-4 text-3xl font-bold md:text-4xl">
             Tell us about your roof
           </h2>
@@ -210,7 +210,7 @@ export function Contact() {
         <div className="rounded-xl border border-deep-foreground/15 bg-deep-foreground/5 p-7">
           <a
             href="tel:+919150864777"
-            className="font-display text-2xl font-bold text-aqua"
+            className="font-display text-2xl font-bold text-solar"
           >
             +91 91508 64777
           </a>
@@ -223,7 +223,7 @@ export function Contact() {
           </address>
           <a
             href="tel:+919150864777"
-            className="bg-gradient-aqua mt-7 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-accent-foreground"
+            className="bg-gradient-solar mt-7 inline-flex rounded-md px-6 py-3 text-sm font-semibold text-deep"
           >
             Call for a free assessment
           </a>
