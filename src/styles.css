@@ -108,6 +108,10 @@
   background-image: var(--gradient-aqua);
 }
 
+@utility bg-gradient-solar {
+  background-image: var(--gradient-solar);
+}
+
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
