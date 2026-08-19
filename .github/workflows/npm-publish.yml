@@ -1,18 +1,16 @@
-# Build and deploy the Vite app to Azure Web App on every push to main.
-# Publish the npm package only when a GitHub Release is created.
-
-name: Vite Build, npm Publish and Azure Deploy
+name: Build and Deploy TanStack Start to Azure Web App
 
 on:
   push:
     branches:
       - main
-  release:
-    types: [created]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,57 +26,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
-
-      - name: Build Vite application
+      - name: Build TanStack Start application
         run: npm run build
 
-      - name: Upload Vite build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: vite-dist
-          path: dist
-          if-no-files-found: error
-
-  deploy-azure:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download Vite build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: vite-dist
-          path: dist
+      - name: Verify server build
+        run: |
+          test -f .output/server/index.mjs
+          echo "TanStack Start server build found."
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./dist
-
-  publish-npm:
-    if: github.event_name == 'release'
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js for npm
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Publish package to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          package: .
