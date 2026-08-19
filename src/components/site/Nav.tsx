@@ -10,14 +10,14 @@ const links = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
-      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
+      <nav className="mx-auto flex h-24 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center">
           <img
             src={logoAsset.url}
             alt="Aaryon Energy Solutions — clean energy, smarter tomorrow"
             width={220}
             height={148}
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
         </a>
         <div className="hidden items-center gap-8 md:flex">
