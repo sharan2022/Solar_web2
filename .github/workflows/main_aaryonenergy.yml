@@ -25,15 +25,22 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
-          npm run build --if-present
+          npm ci
+          npm run build
           npm run test --if-present
+
+      - name: Prepare App Service package
+        run: |
+          mkdir deploy
+          cp -R .output deploy/.output
+          cp azure-deploy/package.json deploy/package.json
+          cp azure-deploy/package-lock.json deploy/package-lock.json
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: deploy
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +69,6 @@ jobs:
           app-name: 'aaryonenergy'
           slot-name: 'Production'
           package: .
+          startup-command: 'npm start'
+          app-settings: '-SCM_DO_BUILD_DURING_DEPLOYMENT false'
           
