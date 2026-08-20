@@ -3,8 +3,10 @@ import { Nav } from "@/components/site/Nav";
 import {
   Hero,
   Services,
+  Systems,
   Showcase,
   Process,
+  Projects,
   Contact,
   Footer,
 } from "@/components/site/Sections";
@@ -34,8 +36,10 @@ function Index() {
       <main>
         <Hero />
         <Services />
+        <Systems />
         <Showcase />
         <Process />
+        <Projects />
         <Contact />
       </main>
       <Footer />
