@@ -7,14 +7,14 @@ export function Hero() {
     <section id="top" className="bg-gradient-deep text-deep-foreground">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
-          <p className="eyebrow text-solar">Rooftop Solar · EV Charging</p>
+          <p className="eyebrow text-solar">Solar EPC · Powering a Sustainable Tomorrow</p>
           <h1 className="mt-5 text-4xl leading-[1.05] font-bold md:text-6xl">
-            Turn your rooftop into a power plant.
+            Smart solar solutions for a better tomorrow.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-deep-foreground/75">
-            Clean energy, smarter tomorrow. Aaryon Energy designs, installs and maintains solar systems for
-            homes, businesses and factories across Tamil Nadu — plus turnkey EV
-            charging stations built to last 25 years.
+            Aaryon Energy Solutions delivers end-to-end solar EPC for residential,
+            commercial, industrial and agricultural customers — designed, engineered
+            and commissioned with our Technical &amp; EPC Partner, SPC Solar Technology.
           </p>
           <a
             href="#contact"
@@ -24,9 +24,9 @@ export function Hero() {
           </a>
           <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-deep-foreground/15 pt-8">
             {[
-              ["25 yr", "Panel warranty"],
-              ["Up to 90%", "Bill reduction"],
-              ["Turnkey", "Design to grid sync"],
+              ["16+ yrs", "Solar experience"],
+              ["12 MW+", "Rooftop commissioned"],
+              ["1200+", "Homes powered"],
             ].map(([k, v]) => (
               <div key={v}>
                 <dt className="font-display text-xl font-bold text-solar">{k}</dt>
@@ -51,35 +51,45 @@ export function Hero() {
 
 const services = [
   {
-    title: "Residential Rooftops",
-    copy: "Grid-tied and hybrid systems from 1 kW to 20 kW, sized to your bill and roof, with net-metering handled end to end.",
-    points: ["Subsidy paperwork", "Hybrid + battery ready", "App-based monitoring"],
+    title: "Rooftop Solar Solutions",
+    copy: "On-grid, off-grid and hybrid rooftop systems for homes, businesses and factories — engineered around your roof and load profile.",
+    points: ["Residential & commercial", "Industrial sheet-metal & RCC", "Net-metering handled"],
   },
   {
-    title: "Commercial Rooftops",
-    copy: "Offices, showrooms, schools and hospitals — cut peak tariff costs with systems engineered around your load profile.",
-    points: ["CAPEX & OPEX models", "Load study included", "Fast payback design"],
+    title: "Ground Mount Solar Solutions",
+    copy: "Utility-style ground-mounted plants on open land, with structural design, civil works and full grid integration.",
+    points: ["Land feasibility study", "Galvanised structures", "HT-side integration"],
   },
   {
-    title: "Industrial Rooftops",
-    copy: "High-capacity installations on sheet-metal and RCC factory roofs, with structural surveys and HT-side integration.",
-    points: ["100 kW – MW scale", "Structural assessment", "SCADA integration"],
+    title: "Solar Water Pump Solutions",
+    copy: "Solar-powered pumping for agriculture and remote sites — reliable irrigation without diesel or grid dependence.",
+    points: ["AC & DC pump sets", "Ideal for farms", "Low running cost"],
   },
   {
-    title: "EV Charging Stations",
-    copy: "AC and DC fast-charging setups for housing societies, fleets and commercial parking — solar-powered where possible.",
-    points: ["AC 7.4 kW to DC 60 kW", "Solar carport canopies", "AMC & support"],
+    title: "EV Charging Solutions",
+    copy: "AC and DC charging setups for homes, societies, fleets and commercial parking — solar-powered where possible.",
+    points: ["AC & DC fast charging", "Solar carport canopies", "AMC & support"],
+  },
+  {
+    title: "Operations & Maintenance",
+    copy: "Scheduled cleaning, performance monitoring and preventive maintenance so your plant keeps generating at design yield.",
+    points: ["Remote monitoring", "Preventive maintenance", "AMC contracts"],
+  },
+  {
+    title: "Energy Consulting & Audit",
+    copy: "Energy audits, load studies and savings modelling to right-size your system and shorten payback.",
+    points: ["Consumption analysis", "Savings & ROI estimate", "Subsidy guidance"],
   },
 ];
 
 export function Services() {
   return (
     <section id="solutions" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-      <p className="eyebrow text-accent">What we build</p>
+      <p className="eyebrow text-accent">Our services</p>
       <h2 className="mt-4 max-w-2xl text-3xl font-bold md:text-4xl">
-        Four solutions, one accountable installer
+        End-to-end solar EPC, under one accountable team
       </h2>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
           <article
             key={s.title}
@@ -104,33 +114,118 @@ export function Services() {
   );
 }
 
+const systems = [
+  {
+    title: "On-Grid Solar",
+    flow: "Solar Panels → Grid-Tie Inverter → Net Meter → Grid",
+    points: [
+      "Reduce electricity bills",
+      "Net metering benefits",
+      "Export excess power to the grid",
+      "Ideal for homes, businesses and industries",
+    ],
+  },
+  {
+    title: "Off-Grid Solar",
+    flow: "Solar Panels → Charge Controller → Battery Bank → Load",
+    points: [
+      "100% independent power",
+      "Ideal for remote locations",
+      "Battery backup for uninterrupted power",
+      "Reliable and cost effective",
+    ],
+  },
+  {
+    title: "Hybrid Solar",
+    flow: "Solar Panels → Hybrid Inverter → Battery → Grid / Load",
+    points: [
+      "Combines solar, battery and grid power",
+      "Uninterrupted power supply",
+      "Maximum savings and energy independence",
+      "Smart energy management",
+    ],
+  },
+];
+
+export function Systems() {
+  return (
+    <section id="systems" className="bg-surface">
+      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+        <p className="eyebrow text-accent">System types</p>
+        <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+          On-grid, off-grid or hybrid
+        </h2>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {systems.map((s) => (
+            <article
+              key={s.title}
+              className="rounded-xl border border-border bg-card p-7 shadow-soft"
+            >
+              <h3 className="text-xl font-semibold">{s.title}</h3>
+              <p className="mt-3 text-xs font-medium tracking-wide text-accent">
+                {s.flow}
+              </p>
+              <ul className="mt-5 space-y-2">
+                {s.points.map((p) => (
+                  <li key={p} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          {[
+            [
+              "CAPEX Model",
+              "You own the solar plant with a one-time investment — full savings, incentives and accelerated depreciation benefits.",
+            ],
+            [
+              "RESCO Model",
+              "Zero upfront investment — we build, own and maintain the plant, and you pay only for the units generated.",
+            ],
+          ].map(([t, d]) => (
+            <div key={t} className="rounded-xl border border-accent/30 bg-card p-7">
+              <h3 className="text-lg font-semibold">{t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Showcase() {
   return (
-    <section id="why" className="bg-surface">
+    <section id="why">
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="eyebrow text-accent">Why Aaryon</p>
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-              Engineering-first, not panel-selling
+              Why choose Aaryon Energy Solutions
             </h2>
             <div className="mt-8 space-y-6">
               {[
                 [
-                  "Site-specific design",
-                  "Shadow analysis, roof orientation and load study before a single quote is issued.",
+                  "High quality solar products",
+                  "Modules, inverters and structures sourced from trusted global brands.",
                 ],
                 [
-                  "Tier-1 components only",
-                  "Mono PERC / TOPCon modules, certified inverters and galvanised mounting structures.",
+                  "Expert engineering",
+                  "Professional installation by certified teams working to strict safety standards.",
                 ],
                 [
-                  "Compliance handled",
-                  "TANGEDCO approvals, net-metering and subsidy documentation managed by our team.",
+                  "Customized solutions",
+                  "Systems sized to your energy needs, with transparent pricing and timely delivery.",
                 ],
                 [
-                  "Lifetime service",
-                  "Scheduled cleaning, performance audits and annual maintenance contracts.",
+                  "After-sales support",
+                  "AMC services, monitoring and maintenance for maximum generation and faster ROI.",
                 ],
               ].map(([t, d]) => (
                 <div key={t} className="border-l-2 border-accent pl-5">
@@ -167,28 +262,63 @@ export function Showcase() {
 }
 
 const steps = [
-  ["01", "Site survey", "Roof measurement, shadow study and consumption analysis."],
-  ["02", "System design", "Layout, yield simulation and a transparent fixed quote."],
-  ["03", "Installation", "Structure, modules, inverter and safety wiring by in-house crews."],
-  ["04", "Sync & service", "Net-meter approval, commissioning and ongoing maintenance."],
+  ["01", "Site survey", "We analyse your energy needs and site feasibility."],
+  ["02", "System design", "Customized system design for maximum efficiency."],
+  ["03", "Engineering & approvals", "Engineering, documentation and statutory approvals."],
+  ["04", "Supply & installation", "Quality products and professional installation by our experts."],
+  ["05", "Testing & commissioning", "Rigorous testing and smooth commissioning."],
+  ["06", "Operation & maintenance", "Ongoing support for optimum performance."],
 ];
 
 export function Process() {
   return (
-    <section id="process" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-      <p className="eyebrow text-accent">How it works</p>
+    <section id="process" className="bg-surface">
+      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+        <p className="eyebrow text-accent">How it works</p>
+        <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+          From survey to switch-on
+        </h2>
+        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map(([n, t, d]) => (
+            <li key={n} className="border-t border-border pt-5">
+              <span className="font-display text-sm font-bold text-accent">{n}</span>
+              <h3 className="mt-3 text-base font-semibold">{t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+const projects = [
+  ["Residential project", "Coimbatore, Tamil Nadu", "5 kW · On-Grid", "Reduced monthly electricity bill by 80%"],
+  ["Commercial project", "Chennai, Tamil Nadu", "50 kW · On-Grid", "Achieved 70% savings on energy costs"],
+  ["Industrial project", "Hosur, Tamil Nadu", "250 kW · On-Grid", "Improved energy efficiency by 60%"],
+  ["Institutional project", "Salem, Tamil Nadu", "100 kW · On-Grid", "Supporting a green campus initiative"],
+];
+
+export function Projects() {
+  return (
+    <section id="projects" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <p className="eyebrow text-accent">Our partner's projects</p>
       <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-        From survey to switch-on in weeks
+        Delivered across Tamil Nadu
       </h2>
-      <ol className="mt-12 grid gap-6 md:grid-cols-4">
-        {steps.map(([n, t, d]) => (
-          <li key={n} className="border-t border-border pt-5">
-            <span className="font-display text-sm font-bold text-accent">{n}</span>
-            <h3 className="mt-3 text-base font-semibold">{t}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
-          </li>
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {projects.map(([t, loc, cap, impact]) => (
+          <article key={t} className="rounded-xl border border-border bg-card p-6 shadow-soft">
+            <h3 className="text-base font-semibold">{t}</h3>
+            <p className="mt-1 text-xs text-muted-foreground">{loc}</p>
+            <p className="mt-4 font-display text-lg font-bold text-accent">{cap}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{impact}</p>
+          </article>
         ))}
-      </ol>
+      </div>
+      <p className="mt-8 text-xs text-muted-foreground">
+        Projects executed by our Technical &amp; EPC Partner, SPC Solar Technology.
+      </p>
     </section>
   );
 }
@@ -198,12 +328,12 @@ export function Contact() {
     <section id="contact" className="bg-gradient-deep text-deep-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="eyebrow text-solar">Talk to us</p>
+          <p className="eyebrow text-solar">Get in touch</p>
           <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-            Tell us about your roof
+            Let's build a sustainable future together
           </h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-deep-foreground/75">
-            Share your monthly bill and roof area — we'll come back with an
+            Share your monthly bill and roof or land area — we'll come back with an
             expected system size, generation estimate and payback period.
           </p>
         </div>
@@ -214,12 +344,18 @@ export function Contact() {
           >
             +91 91508 64777
           </a>
+          <a
+            href="mailto:info.aaryonenergies@gmail.com"
+            className="mt-3 block text-sm text-deep-foreground/80 underline-offset-4 hover:underline"
+          >
+            info.aaryonenergies@gmail.com
+          </a>
           <address className="mt-5 text-sm leading-relaxed text-deep-foreground/75 not-italic">
-            Aaryon Energy
+            Aaryon Energy Solutions
             <br />
-            10, Ponmani Nagar, Ariyamangalam Zone
+            10, Ponmani Nagar, Ariyamangalam
             <br />
-            Trichy, Tamil Nadu – 620002
+            Trichy — 620 002, Tamil Nadu, India
           </address>
           <a
             href="tel:+919150864777"
@@ -237,8 +373,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <span>© {new Date().getFullYear()} Aaryon Energy, Trichy.</span>
-        <span>Rooftop solar · EV charging infrastructure</span>
+        <span>© {new Date().getFullYear()} Aaryon Energy Solutions, Trichy.</span>
+        <span>Solar EPC · Rooftop · Ground mount · Pumps · EV charging</span>
       </div>
     </footer>
   );
