@@ -1,6 +1,15 @@
 import heroImg from "@/assets/hero-rooftop-solar.jpg";
 import industrialImg from "@/assets/industrial-solar.jpg";
 import evImg from "@/assets/ev-charging.jpg";
+import svcRooftop from "@/assets/svc-rooftop.jpg";
+import svcGroundMount from "@/assets/svc-groundmount.jpg";
+import svcPump from "@/assets/svc-pump.jpg";
+import svcEv from "@/assets/svc-ev.jpg";
+import svcOm from "@/assets/svc-om.jpg";
+import svcConsult from "@/assets/svc-consult.jpg";
+import sysOnGrid from "@/assets/sys-ongrid.jpg";
+import sysOffGrid from "@/assets/sys-offgrid.jpg";
+import sysHybrid from "@/assets/sys-hybrid.jpg";
 
 export function Hero() {
   return (
