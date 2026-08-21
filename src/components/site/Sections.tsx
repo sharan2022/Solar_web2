@@ -183,6 +183,8 @@ const systems = [
       "Export excess power to the grid",
       "Ideal for homes, businesses and industries",
     ],
+    img: sysOnGrid,
+    alt: "Grid connected rooftop solar system with net meter and power lines",
   },
   {
     title: "Off-Grid Solar",
@@ -193,6 +195,8 @@ const systems = [
       "Battery backup for uninterrupted power",
       "Reliable and cost effective",
     ],
+    img: sysOffGrid,
+    alt: "Off-grid solar setup with battery bank storage at a remote site",
   },
   {
     title: "Hybrid Solar",
@@ -203,6 +207,8 @@ const systems = [
       "Maximum savings and energy independence",
       "Smart energy management",
     ],
+    img: sysHybrid,
+    alt: "Hybrid solar inverter and battery unit mounted on a wall",
   },
 ];
 
