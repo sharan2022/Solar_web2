@@ -36,6 +36,7 @@ function Index() {
       <Nav />
       <main>
         <Hero />
+        <Models />
         <Services />
         <Systems />
         <Showcase />
