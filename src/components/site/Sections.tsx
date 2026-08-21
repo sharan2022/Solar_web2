@@ -63,33 +63,73 @@ const services = [
     title: "Rooftop Solar Solutions",
     copy: "On-grid, off-grid and hybrid rooftop systems for homes, businesses and factories — engineered around your roof and load profile.",
     points: ["Residential & commercial", "Industrial sheet-metal & RCC", "Net-metering handled"],
+    img: svcRooftop,
+    alt: "Rooftop solar panel array installed on residential buildings",
   },
   {
     title: "Ground Mount Solar Solutions",
     copy: "Utility-style ground-mounted plants on open land, with structural design, civil works and full grid integration.",
     points: ["Land feasibility study", "Galvanised structures", "HT-side integration"],
+    img: svcGroundMount,
+    alt: "Rows of ground mounted solar panels on open land",
   },
   {
     title: "Solar Water Pump Solutions",
     copy: "Solar-powered pumping for agriculture and remote sites — reliable irrigation without diesel or grid dependence.",
     points: ["AC & DC pump sets", "Ideal for farms", "Low running cost"],
+    img: svcPump,
+    alt: "Solar powered water pump irrigating a green farm field",
   },
   {
     title: "EV Charging Solutions",
     copy: "AC and DC charging setups for homes, societies, fleets and commercial parking — solar-powered where possible.",
     points: ["AC & DC fast charging", "Solar carport canopies", "AMC & support"],
+    img: svcEv,
+    alt: "Electric car charging under a solar carport canopy",
   },
   {
     title: "Operations & Maintenance",
     copy: "Scheduled cleaning, performance monitoring and preventive maintenance so your plant keeps generating at design yield.",
     points: ["Remote monitoring", "Preventive maintenance", "AMC contracts"],
+    img: svcOm,
+    alt: "Technician cleaning and inspecting rooftop solar panels",
   },
   {
     title: "Energy Consulting & Audit",
     copy: "Energy audits, load studies and savings modelling to right-size your system and shorten payback.",
     points: ["Consumption analysis", "Savings & ROI estimate", "Subsidy guidance"],
+    img: svcConsult,
+    alt: "Engineer reviewing energy audit charts and solar plant drawings",
   },
 ];
+
+export function Models() {
+  return (
+    <section id="models" className="mx-auto max-w-6xl px-5 pt-20 md:pt-28">
+      <p className="eyebrow text-accent">Investment models</p>
+      <h2 className="mt-4 text-3xl font-bold md:text-4xl">
+        Choose how you want to invest
+      </h2>
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
+        {[
+          [
+            "CAPEX Model",
+            "You own the solar plant with a one-time investment — full savings, incentives and accelerated depreciation benefits.",
+          ],
+          [
+            "RESCO Model",
+            "Zero upfront investment — we build, own and maintain the plant, and you pay only for the units generated.",
+          ],
+        ].map(([t, d]) => (
+          <div key={t} className="rounded-xl border border-accent/30 bg-card p-7 shadow-soft">
+            <h3 className="text-lg font-semibold">{t}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export function Services() {
   return (
@@ -102,20 +142,30 @@ export function Services() {
         {services.map((s) => (
           <article
             key={s.title}
-            className="rounded-xl border border-border bg-card p-7 shadow-soft transition-shadow hover:shadow-lift"
+            className="overflow-hidden rounded-xl border border-border bg-card shadow-soft transition-shadow hover:shadow-lift"
           >
-            <h3 className="text-xl font-semibold">{s.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {s.copy}
-            </p>
-            <ul className="mt-5 space-y-2">
-              {s.points.map((p) => (
-                <li key={p} className="flex items-center gap-2.5 text-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  {p}
-                </li>
-              ))}
-            </ul>
+            <img
+              src={s.img}
+              alt={s.alt}
+              width={800}
+              height={600}
+              loading="lazy"
+              className="h-44 w-full object-cover"
+            />
+            <div className="p-7">
+              <h3 className="text-xl font-semibold">{s.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {s.copy}
+              </p>
+              <ul className="mt-5 space-y-2">
+                {s.points.map((p) => (
+                  <li key={p} className="flex items-center gap-2.5 text-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </article>
         ))}
       </div>
