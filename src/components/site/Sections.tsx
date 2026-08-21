@@ -224,39 +224,31 @@ export function Systems() {
           {systems.map((s) => (
             <article
               key={s.title}
-              className="rounded-xl border border-border bg-card p-7 shadow-soft"
+              className="overflow-hidden rounded-xl border border-border bg-card shadow-soft"
             >
-              <h3 className="text-xl font-semibold">{s.title}</h3>
-              <p className="mt-3 text-xs font-medium tracking-wide text-accent">
-                {s.flow}
-              </p>
-              <ul className="mt-5 space-y-2">
-                {s.points.map((p) => (
-                  <li key={p} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
+              <img
+                src={s.img}
+                alt={s.alt}
+                width={800}
+                height={600}
+                loading="lazy"
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-7">
+                <h3 className="text-xl font-semibold">{s.title}</h3>
+                <p className="mt-3 text-xs font-medium tracking-wide text-accent">
+                  {s.flow}
+                </p>
+                <ul className="mt-5 space-y-2">
+                  {s.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
-          ))}
-        </div>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          {[
-            [
-              "CAPEX Model",
-              "You own the solar plant with a one-time investment — full savings, incentives and accelerated depreciation benefits.",
-            ],
-            [
-              "RESCO Model",
-              "Zero upfront investment — we build, own and maintain the plant, and you pay only for the units generated.",
-            ],
-          ].map(([t, d]) => (
-            <div key={t} className="rounded-xl border border-accent/30 bg-card p-7">
-              <h3 className="text-lg font-semibold">{t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
-            </div>
           ))}
         </div>
       </div>
