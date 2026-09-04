@@ -1,7 +1,6 @@
 import logo from "@/assets/Aaryon Logo.png";
 
 const links = [
-  { label: "Capacity calculator", href: "/solar-calculator" },
   { label: "Services", href: "#solutions" },
   { label: "Solutions", href: "#systems" },
   { label: "Why Aaryon", href: "#why" },
