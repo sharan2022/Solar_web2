@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculations-CL469tqE.js
+//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculations-DVI2jf0S.js
 var STORAGE_KEY = "aaryon-solar-calculations";
 var pricingTable = [
 	{
@@ -82,13 +82,13 @@ function formatCurrency(value) {
 	return `₹${Math.round(value).toLocaleString("en-IN")}`;
 }
 function createCsv(calculations) {
-	return ["Name,Phone,Monthly units (kWh),Required capacity (kW),Submitted at,Approx. total,Government subsidy,Approx. cost after subsidy", ...calculations.map((item) => {
+	return ["Name,Phone,Monthly units,Required capacity (kW),Submitted at,Approx. total,Government subsidy,Approx. cost after subsidy", ...calculations.map((item) => {
 		const pricing = getPricing(item.capacity);
 		return [
 			item.name,
 			item.phone,
 			item.units,
-			item.capacity.toFixed(2),
+			item.capacity,
 			item.createdAt,
 			pricing.total,
 			pricing.subsidy,

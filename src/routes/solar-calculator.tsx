@@ -32,7 +32,7 @@ function SolarCalculator() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const monthlyUnits = Number(units);
-    const capacity = monthlyUnits / 120;
+    const capacity = Math.round(monthlyUnits / 120);
     const result: Calculation = {
       id: Date.now(),
       name: name.trim(),
@@ -95,7 +95,7 @@ function SolarCalculator() {
                   <label className="block text-sm font-medium">Phone number
                     <input required type="tel" pattern="[0-9+() -]{8,}" value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="+91 98765 43210" className="mt-2 h-12 w-full rounded-md border border-input bg-background px-4 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20" />
                   </label>
-                  <label className="block text-sm font-medium">Average monthly electricity units <span className="font-normal text-muted-foreground">(kWh)</span>
+                  <label className="block text-sm font-medium">Average monthly electricity units
                     <input required min="1" step="1" type="number" value={units} onChange={(event) => setUnits(event.target.value)} placeholder="Example: 600" className="mt-2 h-12 w-full rounded-md border border-input bg-background px-4 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20" />
                   </label>
                   <button type="submit" className="bg-gradient-solar inline-flex h-12 w-full items-center justify-center gap-2 rounded-md px-5 text-sm font-semibold text-deep shadow-soft transition hover:opacity-90">Calculate my solar capacity <ArrowRight size={17} /></button>
@@ -119,7 +119,7 @@ function ThankYou({ calculation, onReset }: { calculation: Calculation; onReset:
       <p className="eyebrow mt-8 text-accent">Estimate ready</p>
       <h2 className="mt-3 text-3xl font-bold">Thanks, {calculation.name}.</h2>
       <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">Your estimate has been saved. Aaryon Energy can refine this number after a quick site assessment.</p>
-      <div className="mt-8 border-y border-border py-6"><p className="text-sm text-muted-foreground">Recommended starting capacity</p><p className="mt-2 font-display text-5xl font-bold text-accent">{calculation.capacity.toFixed(2)} <span className="text-2xl">kW</span></p><p className="mt-3 text-xs text-muted-foreground">{calculation.units.toLocaleString()} monthly units ÷ 120 · priced at the {pricing.capacityBand} kW band</p></div>
+      <div className="mt-8 border-y border-border py-6"><p className="text-sm text-muted-foreground">Recommended starting capacity</p><p className="mt-2 font-display text-5xl font-bold text-accent">{calculation.capacity} <span className="text-2xl">kW</span></p><p className="mt-3 text-xs text-muted-foreground">{calculation.units.toLocaleString()} monthly units ÷ 120 · priced at the {pricing.capacityBand} kW band</p></div>
       <div className="mt-6 grid gap-3 sm:grid-cols-3"><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Panel system</p><p className="mt-1 font-display text-lg font-bold">{formatCurrency(pricing.total)}</p></div><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Govt. subsidy</p><p className="mt-1 font-display text-lg font-bold text-accent">-{formatCurrency(pricing.subsidy)}</p></div><div className="rounded-md bg-primary p-4 text-primary-foreground"><p className="text-xs text-primary-foreground/70">Approx. you pay</p><p className="mt-1 font-display text-lg font-bold">{formatCurrency(pricing.afterSubsidy)}</p></div></div>
       <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Estimate based on the supplied mono PERC price list. Final pricing can vary with roof structure, electrical work, installation and approvals.</p>
       <button type="button" onClick={onReset} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent"><RotateCcw size={16} /> Run another estimate</button>

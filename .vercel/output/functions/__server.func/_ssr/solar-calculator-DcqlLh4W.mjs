@@ -2,8 +2,8 @@ import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { l as Check, o as Leaf, r as RotateCcw, t as Sun, u as ArrowRight } from "../_libs/lucide-react.mjs";
 import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
-import { i as getPricing, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-DL6nhTAl.js
+import { i as getPricing, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-DVI2jf0S.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-DcqlLh4W.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function SolarCalculator() {
@@ -14,7 +14,7 @@ function SolarCalculator() {
 	function handleSubmit(event) {
 		event.preventDefault();
 		const monthlyUnits = Number(units);
-		const capacity = monthlyUnits / 120;
+		const capacity = Math.round(monthlyUnits / 120);
 		const result = {
 			id: Date.now(),
 			name: name.trim(),
@@ -118,23 +118,16 @@ function SolarCalculator() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
 							className: "block text-sm font-medium",
-							children: [
-								"Average monthly electricity units ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "font-normal text-muted-foreground",
-									children: "(kWh)"
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-									required: true,
-									min: "1",
-									step: "1",
-									type: "number",
-									value: units,
-									onChange: (event) => setUnits(event.target.value),
-									placeholder: "Example: 600",
-									className: "mt-2 h-12 w-full rounded-md border border-input bg-background px-4 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-								})
-							]
+							children: ["Average monthly electricity units", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								required: true,
+								min: "1",
+								step: "1",
+								type: "number",
+								value: units,
+								onChange: (event) => setUnits(event.target.value),
+								placeholder: "Example: 600",
+								className: "mt-2 h-12 w-full rounded-md border border-input bg-background px-4 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
+							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 							type: "submit",
@@ -182,7 +175,7 @@ function ThankYou({ calculation, onReset }) {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 						className: "mt-2 font-display text-5xl font-bold text-accent",
 						children: [
-							calculation.capacity.toFixed(2),
+							calculation.capacity,
 							" ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-2xl",

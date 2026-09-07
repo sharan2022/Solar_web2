@@ -47,14 +47,14 @@ export function formatCurrency(value: number) {
 }
 
 export function createCsv(calculations: Calculation[]) {
-  const headings = "Name,Phone,Monthly units (kWh),Required capacity (kW),Submitted at,Approx. total,Government subsidy,Approx. cost after subsidy";
+  const headings = "Name,Phone,Monthly units,Required capacity (kW),Submitted at,Approx. total,Government subsidy,Approx. cost after subsidy";
   const rows = calculations.map((item) => {
     const pricing = getPricing(item.capacity);
     return [
       item.name,
       item.phone,
       item.units,
-      item.capacity.toFixed(2),
+      item.capacity,
       item.createdAt,
       pricing.total,
       pricing.subsidy,

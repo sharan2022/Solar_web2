@@ -3,8 +3,8 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { g as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
 import { c as Download, i as RefreshCw, n as ShieldCheck, s as ExternalLink } from "../_libs/lucide-react.mjs";
 import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
-import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-CyXfvR01.js
+import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-DVI2jf0S.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-c-QKHwcy.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function readCalculations() {
@@ -84,7 +84,7 @@ function SolarLeadsAdmin() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Metric, {
 							label: "Total estimated capacity",
-							value: `${totalCapacity.toFixed(1)} kW`
+							value: `${Math.round(totalCapacity)} kW`
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Metric, {
 							label: "Approx. post-subsidy value",
@@ -166,13 +166,13 @@ function SolarLeadsAdmin() {
 												className: "whitespace-nowrap px-5 py-4 text-muted-foreground",
 												children: item.phone
 											}),
-											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 												className: "whitespace-nowrap px-5 py-4",
-												children: [item.units.toLocaleString(), " kWh"]
+												children: item.units.toLocaleString()
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("td", {
 												className: "whitespace-nowrap px-5 py-4 font-semibold text-accent",
-												children: [item.capacity.toFixed(2), " kW"]
+												children: [item.capacity, " kW"]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
 												className: "whitespace-nowrap px-5 py-4",
