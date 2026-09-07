@@ -1,9 +1,10 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { n as require_react, r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { t as Nav } from "./Nav-DfkTfEId.mjs";
+import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
+import { g as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
+import { c as Download, i as RefreshCw, n as ShieldCheck, s as ExternalLink } from "../_libs/lucide-react.mjs";
+import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
 import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
-import { i as RefreshCw, n as ShieldCheck, o as ExternalLink, s as Download } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-ezDEvEep.js
+//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-CyXfvR01.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function readCalculations() {
@@ -12,6 +13,7 @@ function readCalculations() {
 }
 function SolarLeadsAdmin() {
 	const [calculations, setCalculations] = (0, import_react.useState)([]);
+	const navigate = useNavigate();
 	function refresh() {
 		setCalculations(readCalculations());
 	}
@@ -47,18 +49,30 @@ function SolarLeadsAdmin() {
 						})
 					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex gap-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-							type: "button",
-							onClick: refresh,
-							className: "inline-flex h-11 items-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RefreshCw, { size: 16 }), " Refresh"]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-							type: "button",
-							onClick: () => downloadCsv(calculations),
-							disabled: calculations.length === 0,
-							className: "inline-flex h-11 items-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { size: 16 }), " Export CSV"]
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								type: "button",
+								onClick: () => {
+									window.sessionStorage.removeItem("aaryon-admin-auth");
+									navigate({ to: "/admin/login" });
+								},
+								className: "inline-flex h-11 items-center rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent",
+								children: "Log out"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								type: "button",
+								onClick: refresh,
+								className: "inline-flex h-11 items-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RefreshCw, { size: 16 }), " Refresh"]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								type: "button",
+								onClick: () => downloadCsv(calculations),
+								disabled: calculations.length === 0,
+								className: "inline-flex h-11 items-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { size: 16 }), " Export CSV"]
+							})
+						]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

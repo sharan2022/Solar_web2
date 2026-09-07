@@ -1,5 +1,5 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { n as require_react } from "./react+tanstack__react-query.mjs";
+import { r as require_react } from "./react+tanstack__react-query.mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -191,6 +191,32 @@ var Leaf = createLucideIcon("leaf", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var LockKeyhole = createLucideIcon("lock-keyhole", [
+	["circle", {
+		cx: "12",
+		cy: "16",
+		r: "1",
+		key: "1au0dj"
+	}],
+	["rect", {
+		x: "3",
+		y: "10",
+		width: "18",
+		height: "12",
+		rx: "2",
+		key: "6s8ecr"
+	}],
+	["path", {
+		d: "M7 10V7a5 5 0 0 1 10 0v3",
+		key: "1pqi11"
+	}]
+]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var RefreshCw = createLucideIcon("refresh-cw", [
 	["path", {
 		d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8",
@@ -282,4 +308,4 @@ var Sun = createLucideIcon("sun", [
 	}]
 ]);
 //#endregion
-export { Leaf as a, Check as c, RefreshCw as i, ArrowRight as l, ShieldCheck as n, ExternalLink as o, RotateCcw as r, Download as s, Sun as t };
+export { LockKeyhole as a, Download as c, RefreshCw as i, Check as l, ShieldCheck as n, Leaf as o, RotateCcw as r, ExternalLink as s, Sun as t, ArrowRight as u };

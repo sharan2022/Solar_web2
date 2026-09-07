@@ -1,6 +1,6 @@
-import { r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { t as Nav } from "./Nav-DfkTfEId.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-6NZC30xK.js
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DOXLg3XX.js
 var import_jsx_runtime = require_jsx_runtime();
 var hero_rooftop_solar_default = "/assets/hero-rooftop-solar-CIqKA7qp.jpg";
 var industrial_solar_default = "/assets/industrial-solar-Rf9MikOK.jpg";
@@ -23,7 +23,7 @@ function Hero() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow text-solar",
-					children: "Solar EPC · Powering a Sustainable Tomorrow"
+					children: "Serving Chennai, Trichy & surrounding districts across Tamil Nadu"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 					className: "mt-5 text-4xl leading-[1.05] font-bold md:text-6xl",

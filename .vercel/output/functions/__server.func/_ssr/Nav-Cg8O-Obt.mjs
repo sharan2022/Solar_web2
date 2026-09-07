@@ -1,31 +1,31 @@
-import { r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/Nav-DfkTfEId.js
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/Nav-Cg8O-Obt.js
 var import_jsx_runtime = require_jsx_runtime();
 var Aaryon_Logo_default = "/assets/Aaryon%20Logo-DlslZa1j.png";
 var links = [
 	{
 		label: "Services",
-		href: "#solutions"
+		href: "/#solutions"
 	},
 	{
 		label: "Solutions",
-		href: "#systems"
+		href: "/#systems"
 	},
 	{
 		label: "Why Aaryon",
-		href: "#why"
+		href: "/#why"
 	},
 	{
 		label: "Process",
-		href: "#process"
+		href: "/#process"
 	},
 	{
 		label: "Projects",
-		href: "#projects"
+		href: "/#projects"
 	},
 	{
 		label: "Contact",
-		href: "#contact"
+		href: "/#contact"
 	}
 ];
 function Nav() {
@@ -35,7 +35,7 @@ function Nav() {
 			className: "mx-auto flex min-h-24 max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					href: "#top",
+					href: "/#top",
 					className: "flex items-center",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: Aaryon_Logo_default,

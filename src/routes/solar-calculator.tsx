@@ -103,6 +103,7 @@ function SolarCalculator() {
               </>
             )}
           </div>
+
         </section>
       </main>
     </div>
