@@ -10,33 +10,68 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolarCalculatorRouteImport } from './routes/solar-calculator'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminSolarLeadsRouteImport } from './routes/admin.solar-leads'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolarCalculatorRoute = SolarCalculatorRouteImport.update({
+  id: '/solar-calculator',
+  path: '/solar-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSolarLeadsRoute = AdminSolarLeadsRouteImport.update({
+  id: '/admin/solar-leads',
+  path: '/admin/solar-leads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solar-calculator': typeof SolarCalculatorRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/solar-leads': typeof AdminSolarLeadsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/solar-calculator': typeof SolarCalculatorRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/solar-leads': typeof AdminSolarLeadsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solar-calculator': typeof SolarCalculatorRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/solar-leads': typeof AdminSolarLeadsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/solar-calculator' | '/admin/login' | '/admin/solar-leads'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/solar-calculator' | '/admin/login' | '/admin/solar-leads'
+  id:
+    | '__root__'
+    | '/'
+    | '/solar-calculator'
+    | '/admin/login'
+    | '/admin/solar-leads'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SolarCalculatorRoute: typeof SolarCalculatorRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminSolarLeadsRoute: typeof AdminSolarLeadsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +83,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solar-calculator': {
+      id: '/solar-calculator'
+      path: '/solar-calculator'
+      fullPath: '/solar-calculator'
+      preLoaderRoute: typeof SolarCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/solar-leads': {
+      id: '/admin/solar-leads'
+      path: '/admin/solar-leads'
+      fullPath: '/admin/solar-leads'
+      preLoaderRoute: typeof AdminSolarLeadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SolarCalculatorRoute: SolarCalculatorRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminSolarLeadsRoute: AdminSolarLeadsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
