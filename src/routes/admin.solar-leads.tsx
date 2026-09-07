@@ -13,7 +13,7 @@ import {
 export const Route = createFileRoute("/admin/solar-leads")({
   head: () => ({
     meta: [
-      { title: "Solar Leads Admin | Aaryon Energy" },
+      { title: "Saved Calculations Admin | Aaryon Energy" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -48,8 +48,8 @@ function SolarLeadsAdmin() {
         <div className="flex flex-col justify-between gap-6 border-b border-border pb-8 md:flex-row md:items-end">
           <div>
             <div className="flex items-center gap-2 text-accent"><ShieldCheck size={18} /><p className="eyebrow">Internal workspace</p></div>
-            <h1 className="mt-3 text-3xl font-bold md:text-5xl">Solar leads dashboard</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Review submitted capacity estimates and download the lead list as a CSV for Google Sheets.</p>
+            <h1 className="mt-3 text-3xl font-bold md:text-5xl">Saved calculations</h1>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Review submitted capacity estimates and download the saved calculations as a CSV for Google Sheets.</p>
           </div>
           <div className="flex gap-3">
             <button type="button" onClick={refresh} className="inline-flex h-11 items-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent"><RefreshCw size={16} /> Refresh</button>

@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Download, Leaf, RotateCcw, Sun } from "lucide-react";
+import { ArrowRight, Check, Leaf, RotateCcw, Sun } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import {
   type Calculation,
   STORAGE_KEY,
-  downloadCsv,
   formatCurrency,
   getPricing,
 } from "@/lib/solar-calculations";
@@ -29,12 +28,6 @@ function SolarCalculator() {
   const [phone, setPhone] = useState("");
   const [units, setUnits] = useState("");
   const [calculation, setCalculation] = useState<Calculation | null>(null);
-  const [savedCalculations, setSavedCalculations] = useState<Calculation[]>([]);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored) setSavedCalculations(JSON.parse(stored));
-  }, []);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -48,9 +41,9 @@ function SolarCalculator() {
       capacity,
       createdAt: new Date().toISOString(),
     };
-    const next = [result, ...savedCalculations].slice(0, 20);
-    setSavedCalculations(next);
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const savedCalculations = stored ? (JSON.parse(stored) as Calculation[]) : [];
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify([result, ...savedCalculations].slice(0, 20)));
     setCalculation(result);
   }
 
@@ -59,10 +52,6 @@ function SolarCalculator() {
     setName("");
     setPhone("");
     setUnits("");
-  }
-
-  function exportCsv() {
-    downloadCsv(savedCalculations);
   }
 
   return (
@@ -87,7 +76,7 @@ function SolarCalculator() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_0.72fr]">
+        <section className="mx-auto max-w-3xl px-5 py-12 md:py-16">
           <div className="rounded-xl border border-border bg-card p-6 shadow-lift md:p-9">
             {calculation ? <ThankYou calculation={calculation} onReset={resetForm} /> : (
               <>
@@ -115,15 +104,6 @@ function SolarCalculator() {
             )}
           </div>
 
-          <aside className="self-start border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pl-8">
-            <div className="flex items-center justify-between gap-4">
-              <div><p className="eyebrow text-accent">Saved calculations</p><h2 className="mt-3 text-xl font-bold">Your dashboard</h2></div>
-              {savedCalculations.length > 0 && <button onClick={exportCsv} type="button" title="Export calculations as CSV" className="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-border bg-card text-primary transition hover:border-accent hover:text-accent"><Download size={17} /></button>}
-            </div>
-            {savedCalculations.length === 0 ? <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Your submitted estimates will appear here. Export the list as a CSV file and open it in Google Sheets.</p> : (
-              <div className="mt-6 space-y-3">{savedCalculations.slice(0, 5).map((item) => <div key={item.id} className="border-b border-border pb-3"><div className="flex items-baseline justify-between gap-3"><p className="truncate text-sm font-semibold">{item.name}</p><p className="shrink-0 font-display text-lg font-bold text-accent">{item.capacity.toFixed(1)} kW</p></div><p className="mt-1 text-xs text-muted-foreground">{item.units.toLocaleString()} kWh / month · {item.phone}</p><p className="mt-2 text-xs font-semibold text-primary">Approx. {formatCurrency(getPricing(item.capacity).afterSubsidy)} after subsidy</p></div>)}</div>
-            )}
-          </aside>
         </section>
       </main>
     </div>
