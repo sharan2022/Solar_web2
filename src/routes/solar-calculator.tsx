@@ -59,10 +59,10 @@ function SolarCalculator() {
       <Nav />
       <main>
         <section className="overflow-hidden bg-gradient-deep text-deep-foreground">
-          <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:py-24 lg:grid-cols-[1fr_0.82fr] lg:items-end">
+          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-5 sm:py-16 md:gap-12 md:py-24 lg:grid-cols-[1fr_0.82fr] lg:items-end">
             <div>
               <p className="eyebrow text-solar">Solar sizing tool · 60 seconds</p>
-              <h1 className="mt-5 max-w-3xl text-4xl leading-[1.05] font-bold md:text-6xl">
+              <h1 className="mt-5 max-w-3xl text-4xl leading-[1.05] font-bold sm:text-5xl md:text-6xl">
                 Find the right solar capacity for your monthly usage.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-deep-foreground/75">
@@ -76,11 +76,11 @@ function SolarCalculator() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl px-5 py-12 md:py-16">
-          <div className="rounded-xl border border-border bg-card p-6 shadow-lift md:p-9">
+        <section className="mx-auto max-w-3xl px-4 py-10 sm:px-5 sm:py-12 md:py-16">
+          <div className="rounded-xl border border-border bg-card p-4 shadow-lift sm:p-6 md:p-9">
             {calculation ? <ThankYou calculation={calculation} onReset={resetForm} /> : (
               <>
-                <div className="flex items-start justify-between gap-6">
+                <div className="flex items-start justify-between gap-4 sm:gap-6">
                   <div>
                     <p className="eyebrow text-accent">Step 1 of 1</p>
                     <h2 className="mt-3 text-2xl font-bold md:text-3xl">Tell us about your energy use</h2>
@@ -117,10 +117,10 @@ function ThankYou({ calculation, onReset }: { calculation: Calculation; onReset:
     <div className="py-6 md:py-10">
       <div className="grid h-12 w-12 place-items-center rounded-full bg-accent text-accent-foreground"><Check size={24} /></div>
       <p className="eyebrow mt-8 text-accent">Estimate ready</p>
-      <h2 className="mt-3 text-3xl font-bold">Thanks, {calculation.name}.</h2>
+      <h2 className="mt-3 break-words text-3xl font-bold">Thanks, {calculation.name}.</h2>
       <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">Your estimate has been saved. Aaryon Energy can refine this number after a quick site assessment.</p>
       <div className="mt-8 border-y border-border py-6"><p className="text-sm text-muted-foreground">Recommended starting capacity</p><p className="mt-2 font-display text-5xl font-bold text-accent">{calculation.capacity} <span className="text-2xl">kW</span></p><p className="mt-3 text-xs text-muted-foreground">{calculation.units.toLocaleString()} monthly units ÷ 120 · priced at the {pricing.capacityBand} kW band</p></div>
-      <div className="mt-6 grid gap-3 sm:grid-cols-3"><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Panel system</p><p className="mt-1 font-display text-lg font-bold">{formatCurrency(pricing.total)}</p></div><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Govt. subsidy</p><p className="mt-1 font-display text-lg font-bold text-accent">-{formatCurrency(pricing.subsidy)}</p></div><div className="rounded-md bg-primary p-4 text-primary-foreground"><p className="text-xs text-primary-foreground/70">Approx. you pay</p><p className="mt-1 font-display text-lg font-bold">{formatCurrency(pricing.afterSubsidy)}</p></div></div>
+      <div className="mt-6 grid gap-3 sm:grid-cols-3"><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Panel system</p><p className="mt-1 break-words font-display text-lg font-bold">{formatCurrency(pricing.total)}</p></div><div className="rounded-md bg-surface p-4"><p className="text-xs text-muted-foreground">Govt. subsidy</p><p className="mt-1 break-words font-display text-lg font-bold text-accent">-{formatCurrency(pricing.subsidy)}</p></div><div className="rounded-md bg-primary p-4 text-primary-foreground"><p className="text-xs text-primary-foreground/70">Approx. you pay</p><p className="mt-1 break-words font-display text-lg font-bold">{formatCurrency(pricing.afterSubsidy)}</p></div></div>
       <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Estimate based on the supplied mono PERC price list. Final pricing can vary with roof structure, electrical work, installation and approvals.</p>
       <button type="button" onClick={onReset} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent"><RotateCcw size={16} /> Run another estimate</button>
     </div>

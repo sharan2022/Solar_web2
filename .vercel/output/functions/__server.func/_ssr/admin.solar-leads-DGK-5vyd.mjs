@@ -1,10 +1,10 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
-import { c as Download, i as RefreshCw, n as ShieldCheck, s as ExternalLink } from "../_libs/lucide-react.mjs";
-import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
+import { a as RefreshCw, l as ExternalLink, r as ShieldCheck, u as Download } from "../_libs/lucide-react.mjs";
+import { t as Nav } from "./Nav-D_PIGIkW.mjs";
 import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-DVI2jf0S.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-c-QKHwcy.js
+//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-DGK-5vyd.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function readCalculations() {
@@ -27,7 +27,7 @@ function SolarLeadsAdmin() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-surface",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Nav, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
-			className: "mx-auto max-w-6xl px-5 py-12 md:py-16",
+			className: "mx-auto max-w-6xl px-4 py-10 sm:px-5 sm:py-12 md:py-16",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex flex-col justify-between gap-6 border-b border-border pb-8 md:flex-row md:items-end",
@@ -48,7 +48,7 @@ function SolarLeadsAdmin() {
 							children: "Review submitted capacity estimates and download the saved calculations as a CSV for Google Sheets."
 						})
 					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex gap-3",
+						className: "flex flex-wrap gap-2 sm:gap-3",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								type: "button",
@@ -56,20 +56,20 @@ function SolarLeadsAdmin() {
 									window.sessionStorage.removeItem("aaryon-admin-auth");
 									navigate({ to: "/admin/login" });
 								},
-								className: "inline-flex h-11 items-center rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent",
+								className: "inline-flex h-11 flex-1 items-center justify-center rounded-md border border-border bg-card px-3 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent sm:flex-none sm:px-4",
 								children: "Log out"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								type: "button",
 								onClick: refresh,
-								className: "inline-flex h-11 items-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent",
+								className: "inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-md border border-border bg-card px-3 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent sm:flex-none sm:px-4",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RefreshCw, { size: 16 }), " Refresh"]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								type: "button",
 								onClick: () => downloadCsv(calculations),
 								disabled: calculations.length === 0,
-								className: "inline-flex h-11 items-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40",
+								className: "inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { size: 16 }), " Export CSV"]
 							})
 						]
@@ -207,12 +207,12 @@ function SolarLeadsAdmin() {
 }
 function Metric({ label, value }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "rounded-lg border border-border bg-card p-5",
+		className: "rounded-lg border border-border bg-card p-4 sm:p-5",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 			className: "text-xs uppercase tracking-wide text-muted-foreground",
 			children: label
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "mt-2 font-display text-2xl font-bold text-primary",
+			className: "mt-2 break-words font-display text-xl font-bold text-primary sm:text-2xl",
 			children: value
 		})]
 	});

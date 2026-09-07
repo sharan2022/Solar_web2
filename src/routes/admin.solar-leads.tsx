@@ -50,17 +50,17 @@ function SolarLeadsAdmin() {
   return (
     <div className="min-h-screen bg-surface">
       <Nav />
-      <main className="mx-auto max-w-6xl px-5 py-12 md:py-16">
+      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-5 sm:py-12 md:py-16">
         <div className="flex flex-col justify-between gap-6 border-b border-border pb-8 md:flex-row md:items-end">
           <div>
             <div className="flex items-center gap-2 text-accent"><ShieldCheck size={18} /><p className="eyebrow">Internal workspace</p></div>
             <h1 className="mt-3 text-3xl font-bold md:text-5xl">Saved calculations</h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Review submitted capacity estimates and download the saved calculations as a CSV for Google Sheets.</p>
           </div>
-          <div className="flex gap-3">
-            <button type="button" onClick={() => { window.sessionStorage.removeItem("aaryon-admin-auth"); void navigate({ to: "/admin/login" }); }} className="inline-flex h-11 items-center rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent">Log out</button>
-            <button type="button" onClick={refresh} className="inline-flex h-11 items-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent"><RefreshCw size={16} /> Refresh</button>
-            <button type="button" onClick={() => downloadCsv(calculations)} disabled={calculations.length === 0} className="inline-flex h-11 items-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"><Download size={16} /> Export CSV</button>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            <button type="button" onClick={() => { window.sessionStorage.removeItem("aaryon-admin-auth"); void navigate({ to: "/admin/login" }); }} className="inline-flex h-11 flex-1 items-center justify-center rounded-md border border-border bg-card px-3 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent sm:flex-none sm:px-4">Log out</button>
+            <button type="button" onClick={refresh} className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-md border border-border bg-card px-3 text-sm font-semibold text-primary transition hover:border-accent hover:text-accent sm:flex-none sm:px-4"><RefreshCw size={16} /> Refresh</button>
+            <button type="button" onClick={() => downloadCsv(calculations)} disabled={calculations.length === 0} className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"><Download size={16} /> Export CSV</button>
           </div>
         </div>
 
@@ -84,5 +84,5 @@ function SolarLeadsAdmin() {
 }
 
 function Metric({ label, value }: { label: string; value: string }) {
-  return <div className="rounded-lg border border-border bg-card p-5"><p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p><p className="mt-2 font-display text-2xl font-bold text-primary">{value}</p></div>;
+  return <div className="rounded-lg border border-border bg-card p-4 sm:p-5"><p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p><p className="mt-2 break-words font-display text-xl font-bold text-primary sm:text-2xl">{value}</p></div>;
 }

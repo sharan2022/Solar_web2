@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DOXLg3XX.js
+import { t as Nav } from "./Nav-D_PIGIkW.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Lp8k5Q7b.js
 var import_jsx_runtime = require_jsx_runtime();
 var hero_rooftop_solar_default = "/assets/hero-rooftop-solar-CIqKA7qp.jpg";
 var industrial_solar_default = "/assets/industrial-solar-Rf9MikOK.jpg";
@@ -19,14 +19,14 @@ function Hero() {
 		id: "top",
 		className: "bg-gradient-deep text-deep-foreground",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid max-w-6xl gap-12 px-5 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center",
+			className: "mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-5 sm:py-20 md:gap-12 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow text-solar",
 					children: "Serving Chennai, Trichy & surrounding districts across Tamil Nadu"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-					className: "mt-5 text-4xl leading-[1.05] font-bold md:text-6xl",
+					className: "mt-5 max-w-3xl text-4xl leading-[1.05] font-bold sm:text-5xl md:text-6xl",
 					children: "Smart solar solutions for a better tomorrow."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -39,13 +39,13 @@ function Hero() {
 					children: "Get a free site assessment"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
-					className: "mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-deep-foreground/15 pt-8",
+					className: "mt-10 grid max-w-md grid-cols-3 gap-3 border-t border-deep-foreground/15 pt-6 sm:mt-12 sm:gap-6 sm:pt-8",
 					children: [
 						["16+ yrs", "Solar experience"],
 						["12 MW+", "Rooftop commissioned"],
 						["1200+", "Homes powered"]
 					].map(([k, v]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
-						className: "font-display text-xl font-bold text-solar",
+						className: "font-display text-lg font-bold text-solar sm:text-xl",
 						children: k
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dd", {
 						className: "mt-1 text-xs text-deep-foreground/65",
@@ -147,9 +147,9 @@ function Models() {
 				children: "Choose how you want to invest"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-10 grid gap-5 md:grid-cols-2",
+				className: "mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-2",
 				children: [["CAPEX Model", "You own the solar plant with a one-time investment — full savings, incentives and accelerated depreciation benefits."], ["RESCO Model", "Zero upfront investment — we build, own and maintain the plant, and you pay only for the units generated."]].map(([t, d]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "rounded-xl border border-accent/30 bg-card p-7 shadow-soft",
+					className: "rounded-xl border border-accent/30 bg-card p-5 shadow-soft sm:p-7",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 						className: "text-lg font-semibold",
 						children: t
@@ -165,7 +165,7 @@ function Models() {
 function Services() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "solutions",
-		className: "mx-auto max-w-6xl px-5 py-20 md:py-28",
+		className: "mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "eyebrow text-accent",
@@ -176,7 +176,7 @@ function Services() {
 				children: "End-to-end solar EPC, under one accountable team"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
+				className: "mt-8 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3",
 				children: services.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 					className: "overflow-hidden rounded-xl border border-border bg-card shadow-soft transition-shadow hover:shadow-lift",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
@@ -187,7 +187,7 @@ function Services() {
 						loading: "lazy",
 						className: "h-44 w-full object-cover"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "p-7",
+						className: "p-5 sm:p-7",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 								className: "text-xl font-semibold",
@@ -254,7 +254,7 @@ function Systems() {
 		id: "systems",
 		className: "bg-surface",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto max-w-6xl px-5 py-20 md:py-28",
+			className: "mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow text-accent",
@@ -265,7 +265,7 @@ function Systems() {
 					children: "On-grid, off-grid or hybrid"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-12 grid gap-5 md:grid-cols-3",
+					className: "mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3",
 					children: systems.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 						className: "overflow-hidden rounded-xl border border-border bg-card shadow-soft",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
@@ -276,7 +276,7 @@ function Systems() {
 							loading: "lazy",
 							className: "h-44 w-full object-cover"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "p-7",
+							className: "p-5 sm:p-7",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 									className: "text-xl font-semibold",
@@ -305,7 +305,7 @@ function Showcase() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "why",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "mx-auto max-w-6xl px-5 py-20 md:py-28",
+			className: "mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-12 lg:grid-cols-2 lg:items-center",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
@@ -336,7 +336,7 @@ function Showcase() {
 						}, t))
 					})
 				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "grid gap-5",
+					className: "grid gap-4 sm:gap-5",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: industrial_solar_default,
 						alt: "Industrial factory rooftop covered with solar panel rows",
@@ -394,7 +394,7 @@ function Process() {
 		id: "process",
 		className: "bg-surface",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto max-w-6xl px-5 py-20 md:py-28",
+			className: "mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow text-accent",
@@ -468,9 +468,9 @@ function Projects() {
 				children: "Delivered across Tamil Nadu"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4",
+				className: "mt-8 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4",
 				children: projects.map(([t, loc, cap, impact]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
-					className: "rounded-xl border border-border bg-card p-6 shadow-soft",
+					className: "rounded-xl border border-border bg-card p-5 shadow-soft sm:p-6",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 							className: "text-base font-semibold",
@@ -503,7 +503,7 @@ function Contact() {
 		id: "contact",
 		className: "bg-gradient-deep text-deep-foreground",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto grid max-w-6xl gap-10 px-5 py-20 md:py-24 lg:grid-cols-2 lg:items-center",
+			className: "mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-5 sm:py-20 md:gap-10 md:py-24 lg:grid-cols-2 lg:items-center",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "eyebrow text-solar",
@@ -518,16 +518,16 @@ function Contact() {
 					children: "Share your monthly bill and roof or land area — we'll come back with an expected system size, generation estimate and payback period."
 				})
 			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-xl border border-deep-foreground/15 bg-deep-foreground/5 p-7",
+				className: "rounded-xl border border-deep-foreground/15 bg-deep-foreground/5 p-5 sm:p-7",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: "tel:+919150864777",
-						className: "font-display text-2xl font-bold text-solar",
+						className: "block break-words font-display text-xl font-bold text-solar sm:text-2xl",
 						children: "+91 91508 64777"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: "mailto:info.aaryonenergies@gmail.com",
-						className: "mt-3 block text-sm text-deep-foreground/80 underline-offset-4 hover:underline",
+						className: "mt-3 block break-words text-sm text-deep-foreground/80 underline-offset-4 hover:underline",
 						children: "info.aaryonenergies@gmail.com"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("address", {
@@ -554,7 +554,7 @@ function Footer() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 		className: "border-t border-border",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between",
+			className: "mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-xs text-muted-foreground sm:px-5 sm:flex-row sm:items-center sm:justify-between",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
 				"© ",
 				(/* @__PURE__ */ new Date()).getFullYear(),

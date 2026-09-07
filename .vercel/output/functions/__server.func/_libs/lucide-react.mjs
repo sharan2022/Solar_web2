@@ -217,6 +217,26 @@ var LockKeyhole = createLucideIcon("lock-keyhole", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Menu = createLucideIcon("menu", [
+	["path", {
+		d: "M4 5h16",
+		key: "1tepv9"
+	}],
+	["path", {
+		d: "M4 12h16",
+		key: "1lakjw"
+	}],
+	["path", {
+		d: "M4 19h16",
+		key: "1djgab"
+	}]
+]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var RefreshCw = createLucideIcon("refresh-cw", [
 	["path", {
 		d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8",
@@ -307,5 +327,18 @@ var Sun = createLucideIcon("sun", [
 		key: "1shlcs"
 	}]
 ]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var X = createLucideIcon("x", [["path", {
+	d: "M18 6 6 18",
+	key: "1bl5f8"
+}], ["path", {
+	d: "m6 6 12 12",
+	key: "d8bk6v"
+}]]);
 //#endregion
-export { LockKeyhole as a, Download as c, RefreshCw as i, Check as l, ShieldCheck as n, Leaf as o, RotateCcw as r, ExternalLink as s, Sun as t, ArrowRight as u };
+export { RefreshCw as a, Leaf as c, Check as d, ArrowRight as f, RotateCcw as i, ExternalLink as l, Sun as n, Menu as o, ShieldCheck as r, LockKeyhole as s, X as t, Download as u };

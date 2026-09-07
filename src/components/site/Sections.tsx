@@ -14,12 +14,12 @@ import sysHybrid from "@/assets/sys-hybrid.jpg";
 export function Hero() {
   return (
     <section id="top" className="bg-gradient-deep text-deep-foreground">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-5 sm:py-20 md:gap-12 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
           <p className="eyebrow text-solar">
             Serving Chennai, Trichy &amp; surrounding districts across Tamil Nadu
           </p>
-          <h1 className="mt-5 text-4xl leading-[1.05] font-bold md:text-6xl">
+          <h1 className="mt-5 max-w-3xl text-4xl leading-[1.05] font-bold sm:text-5xl md:text-6xl">
             Smart solar solutions for a better tomorrow.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-deep-foreground/75">
@@ -33,14 +33,14 @@ export function Hero() {
           >
             Get a free site assessment
           </a>
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-deep-foreground/15 pt-8">
+          <dl className="mt-10 grid max-w-md grid-cols-3 gap-3 border-t border-deep-foreground/15 pt-6 sm:mt-12 sm:gap-6 sm:pt-8">
             {[
               ["16+ yrs", "Solar experience"],
               ["12 MW+", "Rooftop commissioned"],
               ["1200+", "Homes powered"],
             ].map(([k, v]) => (
               <div key={v}>
-                <dt className="font-display text-xl font-bold text-solar">{k}</dt>
+                <dt className="font-display text-lg font-bold text-solar sm:text-xl">{k}</dt>
                 <dd className="mt-1 text-xs text-deep-foreground/65">{v}</dd>
               </div>
             ))}
@@ -112,7 +112,7 @@ export function Models() {
       <h2 className="mt-4 text-3xl font-bold md:text-4xl">
         Choose how you want to invest
       </h2>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-2">
         {[
           [
             "CAPEX Model",
@@ -123,7 +123,7 @@ export function Models() {
             "Zero upfront investment — we build, own and maintain the plant, and you pay only for the units generated.",
           ],
         ].map(([t, d]) => (
-          <div key={t} className="rounded-xl border border-accent/30 bg-card p-7 shadow-soft">
+            <div key={t} className="rounded-xl border border-accent/30 bg-card p-5 shadow-soft sm:p-7">
             <h3 className="text-lg font-semibold">{t}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p>
           </div>
@@ -135,12 +135,12 @@ export function Models() {
 
 export function Services() {
   return (
-    <section id="solutions" className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+    <section id="solutions" className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28">
       <p className="eyebrow text-accent">Our services</p>
       <h2 className="mt-4 max-w-2xl text-3xl font-bold md:text-4xl">
         End-to-end solar EPC, under one accountable team
       </h2>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
           <article
             key={s.title}
@@ -154,7 +154,7 @@ export function Services() {
               loading="lazy"
               className="h-44 w-full object-cover"
             />
-            <div className="p-7">
+            <div className="p-5 sm:p-7">
               <h3 className="text-xl font-semibold">{s.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {s.copy}
@@ -217,12 +217,12 @@ const systems = [
 export function Systems() {
   return (
     <section id="systems" className="bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28">
         <p className="eyebrow text-accent">System types</p>
         <h2 className="mt-4 text-3xl font-bold md:text-4xl">
           On-grid, off-grid or hybrid
         </h2>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
           {systems.map((s) => (
             <article
               key={s.title}
@@ -236,7 +236,7 @@ export function Systems() {
                 loading="lazy"
                 className="h-44 w-full object-cover"
               />
-              <div className="p-7">
+              <div className="p-5 sm:p-7">
                 <h3 className="text-xl font-semibold">{s.title}</h3>
                 <p className="mt-3 text-xs font-medium tracking-wide text-accent">
                   {s.flow}
@@ -261,7 +261,7 @@ export function Systems() {
 export function Showcase() {
   return (
     <section id="why">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="eyebrow text-accent">Why Aaryon</p>
@@ -296,7 +296,7 @@ export function Showcase() {
               ))}
             </div>
           </div>
-          <div className="grid gap-5">
+          <div className="grid gap-4 sm:gap-5">
             <img
               src={industrialImg}
               alt="Industrial factory rooftop covered with solar panel rows"
@@ -332,7 +332,7 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:py-28">
         <p className="eyebrow text-accent">How it works</p>
         <h2 className="mt-4 text-3xl font-bold md:text-4xl">
           From survey to switch-on
@@ -365,9 +365,9 @@ export function Projects() {
       <h2 className="mt-4 text-3xl font-bold md:text-4xl">
         Delivered across Tamil Nadu
       </h2>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {projects.map(([t, loc, cap, impact]) => (
-          <article key={t} className="rounded-xl border border-border bg-card p-6 shadow-soft">
+          <article key={t} className="rounded-xl border border-border bg-card p-5 shadow-soft sm:p-6">
             <h3 className="text-base font-semibold">{t}</h3>
             <p className="mt-1 text-xs text-muted-foreground">{loc}</p>
             <p className="mt-4 font-display text-lg font-bold text-accent">{cap}</p>
@@ -385,7 +385,7 @@ export function Projects() {
 export function Contact() {
   return (
     <section id="contact" className="bg-gradient-deep text-deep-foreground">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:py-24 lg:grid-cols-2 lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-5 sm:py-20 md:gap-10 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="eyebrow text-solar">Get in touch</p>
           <h2 className="mt-4 text-3xl font-bold md:text-4xl">
@@ -396,16 +396,16 @@ export function Contact() {
             expected system size, generation estimate and payback period.
           </p>
         </div>
-        <div className="rounded-xl border border-deep-foreground/15 bg-deep-foreground/5 p-7">
+        <div className="rounded-xl border border-deep-foreground/15 bg-deep-foreground/5 p-5 sm:p-7">
           <a
             href="tel:+919150864777"
-            className="font-display text-2xl font-bold text-solar"
+            className="block break-words font-display text-xl font-bold text-solar sm:text-2xl"
           >
             +91 91508 64777
           </a>
           <a
             href="mailto:info.aaryonenergies@gmail.com"
-            className="mt-3 block text-sm text-deep-foreground/80 underline-offset-4 hover:underline"
+            className="mt-3 block break-words text-sm text-deep-foreground/80 underline-offset-4 hover:underline"
           >
             info.aaryonenergies@gmail.com
           </a>
@@ -431,7 +431,7 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-xs text-muted-foreground sm:px-5 sm:flex-row sm:items-center sm:justify-between">
         <span>© {new Date().getFullYear()} Aaryon Energy Solutions, Trichy.</span>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <span>Solar EPC · Rooftop · Ground mount · Pumps · EV charging</span>

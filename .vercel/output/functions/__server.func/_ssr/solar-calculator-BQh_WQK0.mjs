@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { l as Check, o as Leaf, r as RotateCcw, t as Sun, u as ArrowRight } from "../_libs/lucide-react.mjs";
-import { t as Nav } from "./Nav-Cg8O-Obt.mjs";
+import { c as Leaf, d as Check, f as ArrowRight, i as RotateCcw, n as Sun } from "../_libs/lucide-react.mjs";
+import { t as Nav } from "./Nav-D_PIGIkW.mjs";
 import { i as getPricing, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-DVI2jf0S.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-DcqlLh4W.js
+//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-BQh_WQK0.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function SolarCalculator() {
@@ -39,14 +39,14 @@ function SolarCalculator() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Nav, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 			className: "overflow-hidden bg-gradient-deep text-deep-foreground",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mx-auto grid max-w-6xl gap-12 px-5 py-16 md:py-24 lg:grid-cols-[1fr_0.82fr] lg:items-end",
+				className: "mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-5 sm:py-16 md:gap-12 md:py-24 lg:grid-cols-[1fr_0.82fr] lg:items-end",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "eyebrow text-solar",
 						children: "Solar sizing tool · 60 seconds"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-						className: "mt-5 max-w-3xl text-4xl leading-[1.05] font-bold md:text-6xl",
+						className: "mt-5 max-w-3xl text-4xl leading-[1.05] font-bold sm:text-5xl md:text-6xl",
 						children: "Find the right solar capacity for your monthly usage."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -65,14 +65,14 @@ function SolarCalculator() {
 				})]
 			})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-			className: "mx-auto max-w-3xl px-5 py-12 md:py-16",
+			className: "mx-auto max-w-3xl px-4 py-10 sm:px-5 sm:py-12 md:py-16",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "rounded-xl border border-border bg-card p-6 shadow-lift md:p-9",
+				className: "rounded-xl border border-border bg-card p-4 shadow-lift sm:p-6 md:p-9",
 				children: calculation ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ThankYou, {
 					calculation,
 					onReset: resetForm
 				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-start justify-between gap-6",
+					className: "flex items-start justify-between gap-4 sm:gap-6",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "eyebrow text-accent",
@@ -154,7 +154,7 @@ function ThankYou({ calculation, onReset }) {
 				children: "Estimate ready"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-				className: "mt-3 text-3xl font-bold",
+				className: "mt-3 break-words text-3xl font-bold",
 				children: [
 					"Thanks, ",
 					calculation.name,
@@ -203,7 +203,7 @@ function ThankYou({ calculation, onReset }) {
 							className: "text-xs text-muted-foreground",
 							children: "Panel system"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-1 font-display text-lg font-bold",
+							className: "mt-1 break-words font-display text-lg font-bold",
 							children: formatCurrency(pricing.total)
 						})]
 					}),
@@ -213,7 +213,7 @@ function ThankYou({ calculation, onReset }) {
 							className: "text-xs text-muted-foreground",
 							children: "Govt. subsidy"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-							className: "mt-1 font-display text-lg font-bold text-accent",
+							className: "mt-1 break-words font-display text-lg font-bold text-accent",
 							children: ["-", formatCurrency(pricing.subsidy)]
 						})]
 					}),
@@ -223,7 +223,7 @@ function ThankYou({ calculation, onReset }) {
 							className: "text-xs text-primary-foreground/70",
 							children: "Approx. you pay"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-1 font-display text-lg font-bold",
+							className: "mt-1 break-words font-display text-lg font-bold",
 							children: formatCurrency(pricing.afterSubsidy)
 						})]
 					})

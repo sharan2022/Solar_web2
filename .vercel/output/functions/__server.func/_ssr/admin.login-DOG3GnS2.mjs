@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as LockKeyhole, n as ShieldCheck, u as ArrowRight } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/admin.login-BuX5XGw_.js
+import { f as ArrowRight, r as ShieldCheck, s as LockKeyhole } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/admin.login-DOG3GnS2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var ADMIN_USERNAME = "adminaaryon";
@@ -22,9 +22,9 @@ function AdminLogin() {
 		setError("The username or password is incorrect.");
 	}
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
-		className: "flex min-h-screen items-center justify-center bg-gradient-deep px-5 py-12",
+		className: "flex min-h-screen items-center justify-center bg-gradient-deep px-4 py-8 sm:px-5 sm:py-12",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "w-full max-w-md rounded-2xl border border-white/15 bg-card p-8 shadow-lift md:p-10",
+			className: "w-full max-w-md rounded-2xl border border-white/15 bg-card p-6 shadow-lift sm:p-8 md:p-10",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex items-center gap-2 text-accent",
