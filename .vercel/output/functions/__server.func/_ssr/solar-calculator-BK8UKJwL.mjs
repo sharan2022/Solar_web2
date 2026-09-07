@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_react, r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { t as Nav } from "./Nav-wo0FYHX6.mjs";
-import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
-import { a as Leaf, c as Check, l as ArrowRight, r as RotateCcw, s as Download, t as Sun } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-CrRuMZLg.js
+import { i as getPricing, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
+import { a as Leaf, c as Check, l as ArrowRight, r as RotateCcw, t as Sun } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-BK8UKJwL.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function SolarCalculator() {
@@ -11,11 +11,6 @@ function SolarCalculator() {
 	const [phone, setPhone] = (0, import_react.useState)("");
 	const [units, setUnits] = (0, import_react.useState)("");
 	const [calculation, setCalculation] = (0, import_react.useState)(null);
-	const [savedCalculations, setSavedCalculations] = (0, import_react.useState)([]);
-	(0, import_react.useEffect)(() => {
-		const stored = window.localStorage.getItem(STORAGE_KEY);
-		if (stored) setSavedCalculations(JSON.parse(stored));
-	}, []);
 	function handleSubmit(event) {
 		event.preventDefault();
 		const monthlyUnits = Number(units);
@@ -28,9 +23,9 @@ function SolarCalculator() {
 			capacity,
 			createdAt: (/* @__PURE__ */ new Date()).toISOString()
 		};
-		const next = [result, ...savedCalculations].slice(0, 20);
-		setSavedCalculations(next);
-		window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+		const stored = window.localStorage.getItem(STORAGE_KEY);
+		const savedCalculations = stored ? JSON.parse(stored) : [];
+		window.localStorage.setItem(STORAGE_KEY, JSON.stringify([result, ...savedCalculations].slice(0, 20)));
 		setCalculation(result);
 	}
 	function resetForm() {
@@ -38,9 +33,6 @@ function SolarCalculator() {
 		setName("");
 		setPhone("");
 		setUnits("");
-	}
-	function exportCsv() {
-		downloadCsv(savedCalculations);
 	}
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "min-h-screen bg-surface",
@@ -72,9 +64,9 @@ function SolarCalculator() {
 					})]
 				})]
 			})
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-			className: "mx-auto grid max-w-6xl gap-8 px-5 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_0.72fr]",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+			className: "mx-auto max-w-3xl px-5 py-12 md:py-16",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "rounded-xl border border-border bg-card p-6 shadow-lift md:p-9",
 				children: calculation ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ThankYou, {
 					calculation,
@@ -151,61 +143,7 @@ function SolarCalculator() {
 						})
 					]
 				})] })
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
-				className: "self-start border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pl-8",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center justify-between gap-4",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "eyebrow text-accent",
-						children: "Saved calculations"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "mt-3 text-xl font-bold",
-						children: "Your dashboard"
-					})] }), savedCalculations.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: exportCsv,
-						type: "button",
-						title: "Export calculations as CSV",
-						className: "grid h-10 w-10 shrink-0 place-items-center rounded-md border border-border bg-card text-primary transition hover:border-accent hover:text-accent",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { size: 17 })
-					})]
-				}), savedCalculations.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 text-sm leading-relaxed text-muted-foreground",
-					children: "Your submitted estimates will appear here. Export the list as a CSV file and open it in Google Sheets."
-				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-6 space-y-3",
-					children: savedCalculations.slice(0, 5).map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "border-b border-border pb-3",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-baseline justify-between gap-3",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "truncate text-sm font-semibold",
-									children: item.name
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									className: "shrink-0 font-display text-lg font-bold text-accent",
-									children: [item.capacity.toFixed(1), " kW"]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "mt-1 text-xs text-muted-foreground",
-								children: [
-									item.units.toLocaleString(),
-									" kWh / month · ",
-									item.phone
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "mt-2 text-xs font-semibold text-primary",
-								children: [
-									"Approx. ",
-									formatCurrency(getPricing(item.capacity).afterSubsidy),
-									" after subsidy"
-								]
-							})
-						]
-					}, item.id))
-				})]
-			})]
+			})
 		})] })]
 	});
 }

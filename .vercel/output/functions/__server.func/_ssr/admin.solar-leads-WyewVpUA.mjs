@@ -3,7 +3,7 @@ import { n as require_react, r as require_jsx_runtime } from "../_libs/react+tan
 import { t as Nav } from "./Nav-wo0FYHX6.mjs";
 import { i as getPricing, n as downloadCsv, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-CL469tqE.mjs";
 import { i as RefreshCw, n as ShieldCheck, o as ExternalLink, s as Download } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-DHqv960K.js
+//#region node_modules/.nitro/vite/services/ssr/assets/admin.solar-leads-WyewVpUA.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function readCalculations() {
@@ -39,11 +39,11 @@ function SolarLeadsAdmin() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 							className: "mt-3 text-3xl font-bold md:text-5xl",
-							children: "Solar leads dashboard"
+							children: "Saved calculations"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground",
-							children: "Review submitted capacity estimates and download the lead list as a CSV for Google Sheets."
+							children: "Review submitted capacity estimates and download the saved calculations as a CSV for Google Sheets."
 						})
 					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex gap-3",

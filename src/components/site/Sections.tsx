@@ -431,7 +431,12 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <span>© {new Date().getFullYear()} Aaryon Energy Solutions, Trichy.</span>
-        <span>Solar EPC · Rooftop · Ground mount · Pumps · EV charging</span>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <span>Solar EPC · Rooftop · Ground mount · Pumps · EV charging</span>
+          <a href="/solar-calculator" className="font-semibold text-primary transition-colors hover:text-accent">
+            Capacity calculator
+          </a>
+        </div>
       </div>
     </footer>
   );
