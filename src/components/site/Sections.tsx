@@ -16,7 +16,9 @@ export function Hero() {
     <section id="top" className="bg-gradient-deep text-deep-foreground">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:py-28 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
-          <p className="eyebrow text-solar">Solar EPC · Powering a Sustainable Tomorrow</p>
+          <p className="eyebrow text-solar">
+            Serving Chennai, Trichy &amp; surrounding districts across Tamil Nadu
+          </p>
           <h1 className="mt-5 text-4xl leading-[1.05] font-bold md:text-6xl">
             Smart solar solutions for a better tomorrow.
           </h1>

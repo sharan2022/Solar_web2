@@ -1,19 +1,19 @@
 import logo from "@/assets/Aaryon Logo.png";
 
 const links = [
-  { label: "Services", href: "#solutions" },
-  { label: "Solutions", href: "#systems" },
-  { label: "Why Aaryon", href: "#why" },
-  { label: "Process", href: "#process" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#solutions" },
+  { label: "Solutions", href: "/#systems" },
+  { label: "Why Aaryon", href: "/#why" },
+  { label: "Process", href: "/#process" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
       <nav className="mx-auto flex min-h-24 max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3">
-        <a href="#top" className="flex items-center">
+        <a href="/#top" className="flex items-center">
           <img
             src={logo}
             alt="Aaryon Energy Solutions"
