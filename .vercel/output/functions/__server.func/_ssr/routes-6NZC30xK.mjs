@@ -1,6 +1,6 @@
 import { r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { t as Nav } from "./Nav-wo0FYHX6.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-D8wFUzmH.js
+import { t as Nav } from "./Nav-DfkTfEId.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-6NZC30xK.js
 var import_jsx_runtime = require_jsx_runtime();
 var hero_rooftop_solar_default = "/assets/hero-rooftop-solar-CIqKA7qp.jpg";
 var industrial_solar_default = "/assets/industrial-solar-Rf9MikOK.jpg";

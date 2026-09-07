@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DErwcsGh.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BiPiNzpL.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/__root.tsx",
@@ -7,34 +7,34 @@ var tsrStartManifest = () => ({ routes: {
 			"/solar-calculator",
 			"/admin/solar-leads"
 		],
-		preloads: ["/assets/index-BJZUCG5h.js"],
+		preloads: ["/assets/index-BlonoZzY.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-BJZUCG5h.js"
+			src: "/assets/index-BlonoZzY.js"
 		} }]
 	},
 	"/": {
 		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-7MwK2wxt.js", "/assets/Nav-CsHEa45v.js"]
+		preloads: ["/assets/routes-BkrFp7nJ.js", "/assets/Nav-BOByRw0X.js"]
 	},
 	"/solar-calculator": {
 		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/solar-calculator.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/solar-calculator-BFjrOUaj.js",
-			"/assets/solar-calculations-DkpWtet9.js",
-			"/assets/Nav-CsHEa45v.js"
+			"/assets/solar-calculator-aXxrPoXV.js",
+			"/assets/solar-calculations-CeSGWnRA.js",
+			"/assets/Nav-BOByRw0X.js"
 		]
 	},
 	"/admin/solar-leads": {
 		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/admin.solar-leads.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/admin.solar-leads-C2Xgr6Ep.js",
-			"/assets/solar-calculations-DkpWtet9.js",
-			"/assets/Nav-CsHEa45v.js"
+			"/assets/admin.solar-leads-BndYehkw.js",
+			"/assets/solar-calculations-CeSGWnRA.js",
+			"/assets/Nav-BOByRw0X.js"
 		]
 	}
 } });

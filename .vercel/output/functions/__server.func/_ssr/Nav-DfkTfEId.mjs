@@ -1,7 +1,7 @@
 import { r as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/Nav-wo0FYHX6.js
+//#region node_modules/.nitro/vite/services/ssr/assets/Nav-DfkTfEId.js
 var import_jsx_runtime = require_jsx_runtime();
-var Aaryon_Logo_default = "/assets/Aaryon%20Logo-BKReZV6i.png";
+var Aaryon_Logo_default = "/assets/Aaryon%20Logo-DlslZa1j.png";
 var links = [
 	{
 		label: "Services",
