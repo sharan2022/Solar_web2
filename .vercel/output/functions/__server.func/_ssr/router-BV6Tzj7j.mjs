@@ -2,10 +2,10 @@ import { i as __toESM } from "../_runtime.mjs";
 import { n as require_react, r as require_jsx_runtime, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BskVcjO5.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BV6Tzj7j.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-BH9wtidw.css";
+var styles_default = "/assets/styles-B_4mhpND.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -174,7 +174,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$2 = () => import("./routes-D8wFUzmH.mjs");
+var $$splitComponentImporter$2 = () => import("./routes-6NZC30xK.mjs");
 var title = "Aaryon Energy | Rooftop Solar & EV Charging in Trichy";
 var description = "Aaryon Energy designs and installs residential, commercial and industrial rooftop solar systems and EV charging stations across Tamil Nadu.";
 var Route$2 = createFileRoute("/")({
@@ -203,7 +203,7 @@ var Route$2 = createFileRoute("/")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./solar-calculator-CrRuMZLg.mjs");
+var $$splitComponentImporter$1 = () => import("./solar-calculator-BdTMDHKn.mjs");
 var Route$1 = createFileRoute("/solar-calculator")({
 	head: () => ({ meta: [{ title: "Solar Capacity Calculator | Aaryon Energy" }, {
 		name: "description",
@@ -211,9 +211,9 @@ var Route$1 = createFileRoute("/solar-calculator")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./admin.solar-leads-DHqv960K.mjs");
+var $$splitComponentImporter = () => import("./admin.solar-leads-ezDEvEep.mjs");
 var Route = createFileRoute("/admin/solar-leads")({
-	head: () => ({ meta: [{ title: "Solar Leads Admin | Aaryon Energy" }, {
+	head: () => ({ meta: [{ title: "Saved Calculations Admin | Aaryon Energy" }, {
 		name: "robots",
 		content: "noindex, nofollow"
 	}] }),
