@@ -1,7 +1,7 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BdU3RJLK.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-B-e9X6-K.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
-		filePath: "E:/code/Solar/Solar_web2/src/routes/__root.tsx",
+		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/__root.tsx",
 		children: [
 			"/",
 			"/solar-calculator",
@@ -16,12 +16,12 @@ var tsrStartManifest = () => ({ routes: {
 		} }]
 	},
 	"/": {
-		filePath: "E:/code/Solar/Solar_web2/src/routes/index.tsx",
+		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/index.tsx",
 		children: void 0,
 		preloads: ["/assets/routes-9ltDyaLT.js", "/assets/Nav-Cx0fjJpK.js"]
 	},
 	"/solar-calculator": {
-		filePath: "E:/code/Solar/Solar_web2/src/routes/solar-calculator.tsx",
+		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/solar-calculator.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/solar-calculator-DB_kiXq0.js",
@@ -32,7 +32,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/admin/login": {
-		filePath: "E:/code/Solar/Solar_web2/src/routes/admin.login.tsx",
+		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/admin.login.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/admin.login-CROfHo7D.js",
@@ -42,7 +42,7 @@ var tsrStartManifest = () => ({ routes: {
 		]
 	},
 	"/admin/solar-leads": {
-		filePath: "E:/code/Solar/Solar_web2/src/routes/admin.solar-leads.tsx",
+		filePath: "E:/code/Solar/aaryon-sun-spark/src/routes/admin.solar-leads.tsx",
 		children: void 0,
 		preloads: [
 			"/assets/admin.solar-leads-DC_asoEl.js",
