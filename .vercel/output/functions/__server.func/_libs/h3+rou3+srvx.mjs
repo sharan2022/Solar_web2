@@ -1,4 +1,8 @@
+import "node:http";
 import { PassThrough, Readable } from "node:stream";
+import "node:stream/promises";
+import "node:https";
+import "node:http2";
 //#region node_modules/h3/node_modules/rou3/dist/index.mjs
 var NullProtoObj = /* @__PURE__ */ (() => {
 	const e = function() {};
@@ -778,4 +782,4 @@ function routeHandler(route) {
 	return data.middleware?.length ? data["~composed"] ??= composeHandler(data.middleware, data.handler) : data.handler;
 }
 //#endregion
-export { HTTPError as i, defineLazyEventHandler as n, toRequest as r, H3Core as t };
+export { toRequest as a, toEventHandler as i, defineHandler as n, HTTPError as o, defineLazyEventHandler as r, H3Core as t };

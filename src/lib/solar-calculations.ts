@@ -14,6 +14,12 @@ export type Pricing = {
   afterSubsidy: number;
 };
 
+export type SolarProjection = Pricing & {
+  monthlyEmi: number;
+  annualGeneration: number;
+  twentyFiveYearSavings: number;
+};
+
 export const STORAGE_KEY = "aaryon-solar-calculations";
 
 const pricingTable: Pricing[] = [
@@ -44,6 +50,19 @@ export function getPricing(capacity: number): Pricing {
 
 export function formatCurrency(value: number) {
   return `₹${Math.round(value).toLocaleString("en-IN")}`;
+}
+
+export function getSolarProjection(capacity: number): SolarProjection {
+  const pricing = getPricing(capacity);
+  const annualGeneration = capacity * 120 * 12;
+  const annualSavings = annualGeneration * 8;
+
+  return {
+    ...pricing,
+    monthlyEmi: pricing.afterSubsidy / 24,
+    annualGeneration,
+    twentyFiveYearSavings: annualSavings * 25,
+  };
 }
 
 export function createCsv(calculations: Calculation[]) {

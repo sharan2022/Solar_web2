@@ -133,3 +133,21 @@
   font-size: 0.7rem;
   font-weight: 600;
 }
+
+@layer utilities {
+  .home-page .py-16 {
+    padding-block: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .home-page .sm\:py-20 {
+      padding-block: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home-page .lg\:py-24 {
+      padding-block: 5rem;
+    }
+  }
+}

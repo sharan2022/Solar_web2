@@ -86,8 +86,8 @@ async function getFailureResponse(opts, ctx) {
 	return opts.failureResponse?.clone() ?? new Response("Forbidden", { status: 403 });
 }
 //#endregion
-//#region node_modules/.nitro/vite/services/ssr/assets/server-DD8yhzpf.js
-var server_DD8yhzpf_exports = /* @__PURE__ */ __exportAll({
+//#region node_modules/.nitro/vite/services/ssr/assets/server-D1WcIunt.js
+var server_D1WcIunt_exports = /* @__PURE__ */ __exportAll({
 	createServerEntry: () => createServerEntry,
 	default: () => server_default
 });
@@ -166,7 +166,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-CGhuQ5p3.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-BIp4Ysdo.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -1194,7 +1194,7 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-Dd6hwJ6P.mjs").then((n) => n.t),
+		import("./router-BDD1Eky4.mjs").then((n) => n.t),
 		import("./start-RKGGYzjZ.mjs"),
 		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
 	]);
@@ -1579,4 +1579,4 @@ function createServerEntry(entry) {
 }
 var server_default = createServerEntry({ fetch });
 //#endregion
-export { createServerEntry, server_default as default, createCsrfMiddleware as n, createMiddleware as r, server_DD8yhzpf_exports as t };
+export { createServerEntry, server_default as default, createCsrfMiddleware as n, createMiddleware as r, server_D1WcIunt_exports as t };

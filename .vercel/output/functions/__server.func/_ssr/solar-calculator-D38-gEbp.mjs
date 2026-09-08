@@ -1,9 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { c as Leaf, d as Check, f as ArrowRight, i as RotateCcw, n as Sun } from "../_libs/lucide-react.mjs";
-import { t as Nav } from "./Nav-D_PIGIkW.mjs";
-import { i as getPricing, r as formatCurrency, t as STORAGE_KEY } from "./solar-calculations-DVI2jf0S.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-BQh_WQK0.js
+import { a as RotateCcw, h as ArrowRight, l as Leaf, m as Check, r as Sun } from "../_libs/lucide-react.mjs";
+import { a as getPricing, i as formatCurrency, n as STORAGE_KEY, t as Nav } from "./solar-calculations-BR1d0qNf.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/solar-calculator-D38-gEbp.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function SolarCalculator() {

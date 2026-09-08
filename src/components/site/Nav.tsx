@@ -3,11 +3,9 @@ import { useState } from "react";
 import logo from "@/assets/Aaryon Logo.png";
 
 const links = [
-  { label: "Services", href: "/#solutions" },
-  { label: "Solutions", href: "/#systems" },
-  { label: "Why Aaryon", href: "/#why" },
-  { label: "Process", href: "/#process" },
-  { label: "Projects", href: "/#projects" },
+  { label: "Home", href: "/#top" },
+  { label: "Why Aaryon", href: "/#trust" },
+  { label: "Our services", href: "/#services" },
   { label: "Contact", href: "/#contact" },
 ];
 

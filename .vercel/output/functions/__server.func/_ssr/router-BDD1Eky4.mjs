@@ -2,11 +2,11 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, k as redirect, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-Dd6hwJ6P.js
-var router_Dd6hwJ6P_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BDD1Eky4.js
+var router_BDD1Eky4_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CDGXm3MB.css";
+var styles_default = "/assets/styles-LTMFz0Ws.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -175,9 +175,9 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$3 = () => import("./routes-Lp8k5Q7b.mjs");
-var title = "Aaryon Energy | Rooftop Solar & EV Charging in Trichy";
-var description = "Aaryon Energy designs and installs residential, commercial and industrial rooftop solar systems and EV charging stations across Tamil Nadu.";
+var $$splitComponentImporter$3 = () => import("./routes-hC8F3dLS.mjs");
+var title = "Aaryon Energy | Rooftop Solar";
+var description = "Aaryon Energy designs and installs residential, commercial and industrial rooftop solar systems across Tamil Nadu.";
 var Route$3 = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title },
@@ -204,7 +204,7 @@ var Route$3 = createFileRoute("/")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./solar-calculator-BQh_WQK0.mjs");
+var $$splitComponentImporter$2 = () => import("./solar-calculator-D38-gEbp.mjs");
 var Route$2 = createFileRoute("/solar-calculator")({
 	head: () => ({ meta: [{ title: "Solar Capacity Calculator | Aaryon Energy" }, {
 		name: "description",
@@ -223,7 +223,7 @@ var Route$1 = createFileRoute("/admin/login")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./admin.solar-leads-DGK-5vyd.mjs");
+var $$splitComponentImporter = () => import("./admin.solar-leads-Dc5u1YWx.mjs");
 var Route = createFileRoute("/admin/solar-leads")({
 	beforeLoad: () => {
 		if (typeof window !== "undefined" && window.sessionStorage.getItem("aaryon-admin-auth") !== "true") throw redirect({ to: "/admin/login" });
@@ -267,4 +267,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_Dd6hwJ6P_exports as t };
+export { getRouter, router_BDD1Eky4_exports as t };
